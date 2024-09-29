@@ -4,6 +4,16 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class RadioTest {
+
+
+    @Test
+    public void testRandomMaxStation() {
+        Radio radio = new Radio( 15);
+        radio.setCurrentStation(10);
+        int expected = 10;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
     @Test
     public void testMiddleStation() {
         Radio radio = new Radio();
@@ -154,7 +164,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentVolume(100);
         radio.louder();
-        int expected = 0;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -174,7 +184,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
         radio.quieter();
-        int expected = 100;
+        int expected = 0;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
