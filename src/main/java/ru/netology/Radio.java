@@ -9,16 +9,18 @@ public class Radio {
         if (currentStation != 9) {
             currentStation++;
             return;
+        } else {
+            currentStation = 0;
         }
-        currentStation = 0;
     }
 
     public void prev() {
         if (currentStation != 0) {
             currentStation--;
             return;
+        } else {
+            currentStation = 9;
         }
-        currentStation = 9;
     }
 
     public int getCurrentStation() {
@@ -53,15 +55,17 @@ public class Radio {
         if (currentVolume != 100) {
             currentVolume++;
             return;
+        } else {
+            currentVolume = 0;
         }
-        currentVolume = 0;
     }
 
     public void quieter() {
         if (currentVolume != 0) {
             currentVolume--;
             return;
+        } else {
+            currentVolume = 100;
         }
-        currentVolume = 100;
     }
 }
