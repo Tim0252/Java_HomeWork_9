@@ -8,12 +8,13 @@ public class RadioTest {
 
     @Test
     public void testRandomMaxStation() {
-        Radio radio = new Radio( 15);
+        Radio radio = new Radio(15);
         radio.setCurrentStation(10);
         int expected = 10;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testMiddleStation() {
         Radio radio = new Radio();
@@ -101,6 +102,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testMiddleVolume() {
         Radio radio = new Radio();
